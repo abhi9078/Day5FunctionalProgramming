@@ -4,23 +4,37 @@ namespace Day5FunctionalProblem
 {
     internal class Program
     {
-        public static void EvenOdd()
+        public static void VowelOrConsonant()
         {
-            Console.WriteLine("Enter a number to check even or odd: ");
-            int num = int.Parse(Console.ReadLine());
-            if (num%2== 0)
+            Console.WriteLine("Enter a Alphabet");
+            char ch = Convert.ToChar(Console.ReadLine().ToLower());
+            switch (ch)
             {
-                Console.WriteLine("The given number " + num + " Is even");
+                case 'a':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'i':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'o':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'u':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'e':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                default:
+                    Console.WriteLine("The Alphabet is a Consonant");
+                    break;
             }
-            else
-            {
-                Console.WriteLine("The given number " + num + " Is Odd");
-            }
+
         }
 
         public static void Main(string[] args)
         {
-            Program.EvenOdd();
+            Program.VowelOrConsonant();
         }
     }
 }
