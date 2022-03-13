@@ -4,25 +4,33 @@ namespace Day5FunctionalProblem
 {
     internal class Program
     {
-        public static void LeapYear()
+        public static void PowerOf2()
         {
-
-            Console.WriteLine("Hello, Welcome to Leap Year Problem ");
-            Console.WriteLine("Enter year to check: ");
-            int year = int.Parse(Console.ReadLine());
-            if ((year % 400 == 0) || (year % 100 != 0 && year % 4 == 0))
+            Console.WriteLine("Wlcome to Power Of Two program");
+            Console.WriteLine("Please Enter the range: ");
+            int range = int.Parse(Console.ReadLine());
+            if (range >= 31)
             {
-                Console.WriteLine("This year is a Leap Year");
+                Console.WriteLine("Please input the range with in 31");
             }
             else
             {
-                Console.WriteLine("Is not a Leap Year");
+                int n = range;
+                int result = 1;
+                while (range > 0)
+                {
+                    result = result * 2;
+                    range--;
+                }
+                Console.WriteLine("Result of 2^" + n + "is: " + result);
             }
+
         }
+
 
         public static void Main(string[] args)
         {
-            Program.LeapYear();
+            Program.PowerOf2();
         }
     }
 }
