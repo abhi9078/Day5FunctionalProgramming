@@ -4,23 +4,23 @@ namespace Day5FunctionalProblem
 {
     internal class Program
     {
-        public static void SwapTwoNumber()
+        public static void EvenOdd()
         {
-            Console.WriteLine("Welcome To Swap To Number problem: ");
-            Console.WriteLine("Please Enter first Number ");
-            int first=int.Parse(Console.ReadLine());
-            Console.WriteLine("Please Enter Second number: ");
-            int second=int.Parse(Console.ReadLine());
-            Console.WriteLine("Before Swapping First number is: " + first + " and second number is " + second);
-            int temp = first;
-            first = second;
-            second = temp;
-            Console.WriteLine("After Swapping First number is: " + first + " and second number is " + second);
+            Console.WriteLine("Enter a number to check even or odd: ");
+            int num = int.Parse(Console.ReadLine());
+            if (num%2== 0)
+            {
+                Console.WriteLine("The given number " + num + " Is even");
+            }
+            else
+            {
+                Console.WriteLine("The given number " + num + " Is Odd");
+            }
         }
 
         public static void Main(string[] args)
         {
-            Program.SwapTwoNumber();
+            Program.EvenOdd();
         }
     }
 }
