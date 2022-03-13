@@ -4,33 +4,31 @@ namespace Day5FunctionalProblem
 {
     internal class Program
     {
-        public static void PowerOf2()
+        public static void HramonicNumber()
         {
-            Console.WriteLine("Wlcome to Power Of Two program");
-            Console.WriteLine("Please Enter the range: ");
+            Console.WriteLine("Welcome to Harmonic Number Problem");
+            Console.WriteLine("Please Enter the Range: ");
             int range = int.Parse(Console.ReadLine());
-            if (range >= 31)
+            if (range == 0 || range < 0)
             {
-                Console.WriteLine("Please input the range with in 31");
+                Console.WriteLine("Please Enter Non-Zero range");
             }
             else
             {
+
+                float result = 0;
                 int n = range;
-                int result = 1;
-                while (range > 0)
+                for (float i = 1; i <= range; i++)
                 {
-                    result = result * 2;
-                    range--;
+                    result = result + 1 / i;
                 }
-                Console.WriteLine("Result of 2^" + n + "is: " + result);
+                Console.WriteLine("Harmonic Number upto the range" + n + "is: " + result);
             }
-
         }
-
 
         public static void Main(string[] args)
         {
-            Program.PowerOf2();
+            Program.HramonicNumber();
         }
     }
 }
